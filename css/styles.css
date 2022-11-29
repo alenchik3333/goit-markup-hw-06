@@ -757,21 +757,25 @@ h3 {
   width: 448px;
   height: 120px;
   padding: 12px 16px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   outline: 1px solid transparent;
   resize: none;
   border: 1px solid var(--border-modal-input);
   border-radius: 4px;
   transition: border var(--transition-fast), outline-color var(--transition-fast) ;
-  /* position: absolute;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: var(--text-placeholder-color); */
 }
 
 .modal-form-message:focus {
   outline-color: var(--additional-text-color);
+  cursor: pointer;
+}
+
+.modal-form-wrapper textarea::placeholder {
+  position: absolute;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--text-placeholder-color);
 }
 
 .modal-form-agreement {
@@ -823,6 +827,10 @@ h3 {
   background-color: var (--additional-text-color);
 } */
 
+.modal-form-message:not(:placeholder-shown) {
+  border-color: var(--additional-text-color);
+}
+
 .modal-form-btn {
   margin: 30px 124px 0;
   width: 200px;
@@ -844,5 +852,4 @@ h3 {
 .modal-form-btn:focus {
   background: var(--hero-button-active);
   cursor: pointer;
-  
 }

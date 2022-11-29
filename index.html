@@ -579,11 +579,16 @@
         </div>
         <div class="footer-join">
           <p class="footer-form-text">Підпишіться на розсилку</p>
-          <form class="footer-form" action="">
+          <form class="footer-form" name="footer_form">
             <label for="user_mail"></label>
-            <input class="footer-form-field" type="mail" id="user_mail">
-            <svg class="" width="" height="">
-              <use href=""></use>
+            <input 
+            class="footer-form-field" 
+            type="mail" 
+            id="user_mail"
+            placeholder="E-mail"
+            required>
+            <svg class="footer-form-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-send"></use>
             </svg>
             <button class="footer-form-btn" type="submit">Підписатися</button>
           </form>
